@@ -41,7 +41,7 @@ def _mutate(individual):
 
 def _crossover_and_mutate(pop, p):
     new_population = []
-    for i in range(POP_LEN):
+    for i in range(POP_LEN // 2):
         parents = random.sample(pop, k=2)
         child_1 = parents[0][:p] + parents[1][p:p * 2] + parents[0][p * 2: len(parents[0])]
         child_2 = parents[1][:p] + parents[0][p:p * 2] + parents[1][p * 2: len(parents[1])]
